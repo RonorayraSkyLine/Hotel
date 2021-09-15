@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <h1>Страница бронирования</h1>
+    <form action="" method="get"  oninput="result.value=  parseInt(price.value) * parseInt(People_deror.value)">
+        <fieldset>
+            <legend>Данные о заказе</legend>
+            <label for="Region">Выберите регион</label>
+
+            <select name="Sity" id="Sity-select">
+                <option value="">Пожалуйста выберите регион</option>
+                <option value="Moskow">Москва</option>
+                <option value="Saint-Petersburg">Санкт-Петербург</option>
+                <option value="Sochi">Сочи</option>
+                <option value="Krasnodar">Краснодар</option>
+                <option value="Altay">Алтай</option>
+            </select>
+            <label for="Adres-kemping">Выберите адрес заселения</label>
+
+            <select name="Adres" id="Adres-select">
+                <option value="">Пожалуйста выберите адрес кемпинга</option>
+                <option value="Moskow">Москва</option>
+                <option value="Saint-Petersburg">Санкт-Петербург</option>
+                <option value="Sochi">Сочи</option>
+                <option value="Krasnodar">Краснодар</option>
+                <option value="Altay">Алтай</option>
+            </select>
+
+            <label for="Data-enter">Дата заселения</label>
+            <input type="date" id="start" name="trip-start"
+       value="2021-09-15"
+       min="2021-09-15" max="2021-12-31">
+       <label for="Data-exit">Дата выселения</label>
+       <input type="date" id="start" name="trip-start"
+  value="2021-09-15"
+  min="2021-09-15" max="2021-12-31">
+  <label for="name">Стоимость</label>
+  <label for="">
+   <input type="text" id="price" name="price" style='width: 90px;' required> рублей
+  </label>
+        </fieldset>
+        <fieldset>
+            <legend>Данные о постояльцах</legend>
+            <label for="name">Фамилия</label>
+
+            <input type="text" id="Last-name" name="last-name" required>
+        
+            <label for="name">Имя</label>
+
+            <input type="text" id="name" name="name" required>
+           
+            <label for="name">Отчество </label>
+
+            <input type="text" id="middle-name" name="middle-name" required>
+         
+            <label for="name">Дата рождения </label>
+            <input type="date" id="start" name="trip-start"
+            value="2021-09-15"
+            min="1920-01-01" max="1920-12-31">
+            <label for="name">Номер документа</label>
+            <input type="text" id="passport" name="passport" required>
+        </fieldset>
+        <fieldset>
+            <legend>Выбор дополнительных услуг</legend>
+            <div class="dop">
+            <div>
+                <input type="checkbox" id="Medicine" name="Medicine"
+                       checked>
+                <label for="Medicine">Медицинское сопровождение</label>
+              </div>
+              
+              <div>
+                <input type="checkbox" id="Delivery" name="Delivery">
+                <label for="Delivery">Курьерская доставка</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="Eat" name="Eat">
+                <label for="Eat">Питание</label>
+              </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Итого</legend>
+            <label for="People">Количество людей</label>
+            <input type="number" id="People_deror" name="people" style="width: 40px;"
+                   min="1" max="10">
+            <label for="total" style="width: 300px;">Итоговая стоимость <output id ="people" name="result" for="price">0</output> рублей</label>
+        </fieldset>
+        <button class="btn">Оформить</button>
+      </form>
+</div>
+</body>
+</html>
